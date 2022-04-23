@@ -1,0 +1,46 @@
+﻿<Window x:Class="milionerzy.Editor.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:milionerzy.Editor"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <Label>Treść pytania</Label>
+            <TextBox x:Name="TextQuestion" Width="200" Height="100"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Label>Odpowiedzi:</Label>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Label>Odpowiedź 1</Label>
+                <TextBox x:Name="TextAnswer1" Width="200"></TextBox>
+                <RadioButton x:Name="RadioAnswer1" GroupName="GroupAnswers">Poprawna</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Label>Odpowiedź 2</Label>
+                <TextBox x:Name="TextAnswer2" Width="200"></TextBox>
+                <RadioButton x:Name="RadioAnswer2" GroupName="GroupAnswers">Poprawna</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Label>Odpowiedź 3</Label>
+                <TextBox x:Name="TextAnswer3" Width="200"></TextBox>
+                <RadioButton x:Name="RadioAnswer3" GroupName="GroupAnswers">Poprawna</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Label>Odpowiedź 4</Label>
+                <TextBox x:Name="TextAnswer4" Width="200"></TextBox>
+                <RadioButton x:Name="RadioAnswer4" GroupName="GroupAnswers">Poprawna</RadioButton>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Trudność</Label>
+                <TextBox x:Name="TextDiff" Width="25"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Click="ButtonSave_OnClick">Zapisz</Button>
+                <Button Click="ButtonCancel_OnClick">Anuluj</Button>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

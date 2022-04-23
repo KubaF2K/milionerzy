@@ -1,0 +1,14 @@
+﻿<Window x:Class="milionerzy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock FontSize="96">Milionerzy</TextBlock>
+        <Button Click="ButtonGame_OnClick" Width="340" Height="40" Padding="0">Start</Button>
+        <Button Click="ButtonEdit_OnClick" Width="340" Height="40" Padding="0">Edytuj pytania</Button>
+        <Button Click="ButtonExit_OnClick" Width="340" Height="40" Padding="0">Wyjdź</Button>
+    </StackPanel>
+</Window>
