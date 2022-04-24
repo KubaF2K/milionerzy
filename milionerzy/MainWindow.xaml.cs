@@ -1,6 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using milionerzy.Editor;
+using milionerzy.Game;
 
 namespace milionerzy;
 
@@ -16,7 +16,9 @@ public partial class MainWindow
 
     private void ButtonGame_OnClick(object sender, RoutedEventArgs e)
     {
-        throw new NotImplementedException();
+        var dialog = new GameSelectWindow();
+        if (dialog.ShowDialog() != true) return;
+        new GameWindow(dialog.Type).Show();
     }
 
     private void ButtonEdit_OnClick(object sender, RoutedEventArgs e)

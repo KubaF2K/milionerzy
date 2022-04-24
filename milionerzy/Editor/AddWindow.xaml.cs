@@ -50,11 +50,11 @@ public partial class AddWindow
         try
         {
             diff = Convert.ToInt32(TextDiff.Text);
-            if (diff is < 0 or > 11) throw new FormatException();
+            if (diff is < 0 or > 14) throw new FormatException();
         }
         catch (FormatException)
         {
-            MessageBox.Show("Podano błędny poziom trudności! Podaj wartość od 0 do 11");
+            MessageBox.Show("Podano błędny poziom trudności! Podaj wartość od 0 do 14");
             return;
         }
 

@@ -1,0 +1,14 @@
+﻿<Window x:Class="milionerzy.Game.GameSelectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="GameSelectWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+        <TextBlock HorizontalAlignment="Center">Wybierz grę:</TextBlock>
+        <Button Click="ButtonClassic_OnClick">Klasyczna (15 pytań, 2 gwarantowane kwoty, 3 koła ratunkowe)</Button>
+        <Button Click="ButtonStandard_OnClick">Standardowa (12 pytań, 2 gwarantowane kwoty, 3 koła ratunkowe)</Button>
+        <Button Click="Button4lifelines_OnClick">4 koła (12 pytań, 1 gwarantowana kwota, 4 koła ratunkowe)</Button>
+    </StackPanel>
+</Window>
