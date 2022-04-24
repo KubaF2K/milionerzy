@@ -14,7 +14,9 @@ internal class Stage
     private readonly Brush _activeColor = new SolidColorBrush(Colors.Chartreuse);
     private readonly Brush _inactiveColor = new SolidColorBrush(Colors.Black);
     private readonly Brush _guaranteedColor = new SolidColorBrush(Colors.Blue);
-    private readonly bool _isGuaranteed;
+    public bool IsGuaranteed { get; }
+
+    public int Value { get; }
     public Question Question { get; set; }
     
     public TextBlock StageTextBlock { get; }
@@ -25,7 +27,7 @@ internal class Stage
         {
             if (value)
                 StageTextBlock.Foreground = _activeColor;
-            else if (_isGuaranteed)
+            else if (IsGuaranteed)
                 StageTextBlock.Foreground = _guaranteedColor;
             else
                 StageTextBlock.Foreground = _inactiveColor;
@@ -34,8 +36,9 @@ internal class Stage
 
     public Stage(int id, int value, bool isGuaranteed, Question question)
     {
+        Value = value;
         Question = question;
-        _isGuaranteed = isGuaranteed;
+        IsGuaranteed = isGuaranteed;
         StageTextBlock = new TextBlock
         {
             Text = id + ". " + value + " złotych"
@@ -159,5 +162,60 @@ public partial class GameWindow
             ButtonLineChange.Visibility = Visibility.Collapsed;
         
         DrawQuestionInfo();
+    }
+
+    private void CheckAnswer(int answerId)
+    {
+        if (CurrentQuestion.CorrectAnswerId == answerId)
+        {
+            MessageBox.Show("Dobree");
+            if (CurrentStage.Value == 1000000)
+            {
+                MessageBox.Show("Wygrałeś 1000000 zł");
+                Close();
+            }
+            else
+            {
+                CurrentStageId++;
+                DrawQuestionInfo();
+            }
+        }
+        else
+        {
+            MessageBox.Show("źle");
+        }
+    }
+    private void ButtonAnswer1_OnClick(object sender, RoutedEventArgs e)
+    {
+        CheckAnswer(1);
+    }
+
+    private void ButtonAnswer2_OnClick(object sender, RoutedEventArgs e)
+    {
+        CheckAnswer(2);
+    }
+
+    private void ButtonAnswer3_OnClick(object sender, RoutedEventArgs e)
+    {
+        CheckAnswer(3);
+    }
+
+    private void ButtonAnswer4_OnClick(object sender, RoutedEventArgs e)
+    {
+        CheckAnswer(4);
+    }
+
+    private void ButtonQuit_OnClick(object sender, RoutedEventArgs e)
+    {
+        for (var i = CurrentStageId - 1; i >= 0; i--)
+        {
+            if (!_stages[i].IsGuaranteed) continue;
+            MessageBox.Show("Wygrałeś " + _stages[i].Value + " zł!");
+            Close();
+            return;
+        }
+
+        MessageBox.Show("Odchodzisz z pustymi rękami!");
+        Close();
     }
 }

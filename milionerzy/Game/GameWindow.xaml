@@ -18,10 +18,10 @@
         </Grid.RowDefinitions>
         
         <TextBlock Grid.ColumnSpan="2" x:Name="TextQuestion" VerticalAlignment="Center" HorizontalAlignment="Center">Pytanie placeholder</TextBlock>
-        <Button Grid.Column="0" Grid.Row="1" x:Name="ButtonAnswer1">Odp A placeholder</Button>
-        <Button Grid.Column="1" Grid.Row="1" x:Name="ButtonAnswer2">Odp B placeholder</Button>
-        <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAnswer3">Odp C placeholder</Button>
-        <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonAnswer4">Odp D placeholder</Button>
+        <Button Grid.Column="0" Grid.Row="1" x:Name="ButtonAnswer1" Click="ButtonAnswer1_OnClick">Odp A placeholder</Button>
+        <Button Grid.Column="1" Grid.Row="1" x:Name="ButtonAnswer2" Click="ButtonAnswer2_OnClick">Odp B placeholder</Button>
+        <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAnswer3" Click="ButtonAnswer3_OnClick">Odp C placeholder</Button>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonAnswer4" Click="ButtonAnswer4_OnClick">Odp D placeholder</Button>
         <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Orientation="Vertical">
             <StackPanel Orientation="Vertical">
                 <Button x:Name="ButtonLineHalfHalf">50:50</Button>
@@ -30,7 +30,7 @@
                 <Button x:Name="ButtonLineChange">Zmiana pytania</Button>
             </StackPanel>
             <StackPanel Orientation="Vertical" x:Name="StackStages"></StackPanel>
-            <Button x:Name="ButtonQuit" VerticalAlignment="Bottom"> Wycofaj się</Button>
+            <Button x:Name="ButtonQuit" Click="ButtonQuit_OnClick" VerticalAlignment="Bottom"> Wycofaj się</Button>
         </StackPanel>
     </Grid>
 </Window>
