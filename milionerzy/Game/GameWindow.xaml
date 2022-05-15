@@ -24,10 +24,10 @@
         <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonAnswer4" Click="ButtonAnswer4_OnClick">Odp D placeholder</Button>
         <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Orientation="Vertical">
             <StackPanel Orientation="Vertical">
-                <Button x:Name="ButtonLineHalfHalf">50:50</Button>
-                <Button x:Name="ButtonLineAudience">Pytanie do publiczności</Button>
-                <Button x:Name="ButtonLineFriend">Telefon do przyjaciela</Button>
-                <Button x:Name="ButtonLineChange">Zmiana pytania</Button>
+                <Button x:Name="ButtonLineHalfHalf" Click="ButtonLineHalfHalf_OnClick">50:50</Button>
+                <Button x:Name="ButtonLineAudience" Click="ButtonLineAudience_OnClick">Pytanie do publiczności</Button>
+                <Button x:Name="ButtonLineFriend" Click="ButtonLineFriend_OnClick">Telefon do przyjaciela</Button>
+                <Button x:Name="ButtonLineChange" Click="ButtonLineChange_OnClick">Zmiana pytania</Button>
             </StackPanel>
             <StackPanel Orientation="Vertical" x:Name="StackStages"></StackPanel>
             <Button x:Name="ButtonQuit" Click="ButtonQuit_OnClick" VerticalAlignment="Bottom"> Wycofaj się</Button>

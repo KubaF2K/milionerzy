@@ -1,0 +1,34 @@
+﻿<Window x:Class="milionerzy.Game.ATAWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:milionerzy.Game"
+        mc:Ignorable="d"
+        Title="ATAWindow" Height="200" Width="600">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Label>Ocena publiczności:</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Odp A:</Label>
+            <Rectangle Fill="Green" Height="20" Width="100" x:Name="RectangleAnswer1"></Rectangle>
+            <Label x:Name="LabelAnswer1"> %</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Odp B:</Label>
+            <Rectangle Fill="Green" Height="20" Width="100" x:Name="RectangleAnswer2"></Rectangle>
+            <Label x:Name="LabelAnswer2"> %</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Odp C:</Label>
+            <Rectangle Fill="Green" Height="20" Width="100" x:Name="RectangleAnswer3"></Rectangle>
+            <Label x:Name="LabelAnswer3"> %</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Odp D:</Label>
+            <Rectangle Fill="Green" Height="20" Width="100" x:Name="RectangleAnswer4"></Rectangle>
+            <Label x:Name="LabelAnswer4"> %</Label>
+        </StackPanel>
+    </StackPanel>
+</Window>
